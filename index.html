@@ -52,9 +52,6 @@
 </style></head>
 <body class="bg">
 <script>
-  window.onload = function(e){if(localStorage.Fail==null){localStorage.Fail=0;localStorage.Success=0;}
-  document.getElementById("success").innerHTML="Success: "+localStorage.Success;
-  document.getElementById("fail").innerHTML="Fail: "+localStorage.Fail;}
   window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
   window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
   window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
